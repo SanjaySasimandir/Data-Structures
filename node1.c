@@ -52,7 +52,7 @@ void main()
 		switch (choice)
 			{
 			case 1:
-				printf("Enter your data: \n");
+				printf("Enter your data: ");
 				scanf("%d",&number);
 				n=createnode(number);
 				head=insertbeg(n,head);
@@ -77,6 +77,7 @@ void main()
 				traversal(head);
 				break;
 			}
-		printf("\n\n");
+		printf("\n\n\n");
 	}
 }
+
