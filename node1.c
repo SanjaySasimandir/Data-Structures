@@ -43,6 +43,7 @@ void main()
 {
 	int choice,number;
 	struct node *n;
+	struct node *head=NULL;
 	while(1)
 	{
 		printf("Choose from the following options: \n 1. Insertion at the Beginning \n 2. Insertion at the Middle \n 3. Insertion at the End \n 4. Deletion from the Beginning \n 5. Deletion from the Middle \n 6. Deletion at the End \n 7. Traversal\n" );
@@ -54,6 +55,7 @@ void main()
 				printf("Enter your data: \n");
 				scanf("%d",&number);
 				n=createnode(number);
+				head=insertbeg(n,head);
 				break;
 			case 2:
 				printf("You have chosen - 2. Insertion at the Middle\n");
@@ -72,6 +74,7 @@ void main()
 				break;
 			case 7:
 				printf("You have chosen - 7.Traversal\n");
+				traversal(head);
 				break;
 			}
 		printf("\n\n");
