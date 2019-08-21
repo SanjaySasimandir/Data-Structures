@@ -24,6 +24,20 @@ struct node*insertbeg(struct node*n, struct node*head)
 		}
 	return head;
 	};
+struct node*delend(struct node*head)
+{
+	if (head==NULL)
+		printf("Empty");
+	else
+		{
+		while(p->addr!=NULL)
+			{
+			c=p;
+			p=p->addr;
+			}
+		}
+	return head;
+};
 void traversal(struct node*head)
 	{
 	struct node*p;
@@ -59,9 +73,17 @@ void main()
 				break;
 			case 2:
 				printf("You have chosen - 2. Insertion at the Middle\n");
+				printf("Enter your data: ");
+				scanf("%d",&number);
+				n=createnode(number);
+				head=insertbeg(n,head);
 				break;
 			case 3:
 				printf("You have chosen - 3. Insertion at the End\n");
+				printf("Enter your data: ");
+				scanf("%d",&number);
+				n=createnode(number);
+				head=insertbeg(n,head);
 				break;
 			case 4:
 				printf("You have chosen - 4. Deletion from the Beginning\n");
@@ -71,6 +93,7 @@ void main()
 				break;
 			case 6:
 				printf("You have chosen - 6. Deletion at the End\n");
+				head=delend(head);
 				break;
 			case 7:
 				printf("You have chosen - 7.Traversal\n");
