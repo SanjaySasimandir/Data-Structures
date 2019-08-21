@@ -34,7 +34,7 @@ void traversal(struct node*head)
 		p=head;
 		while(p!=NULL)
 			{
-			p=p->data;
+			printf("%d",p->data);
 			p=p->addr;
 			}
 		}
