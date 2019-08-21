@@ -1,5 +1,44 @@
 #include<stdio.h>
-struct node*insertbeg(struct node*n, struct node*head);
+#include<stdlib.h>
+struct node
+{
+	int data;
+	struct node*addr;
+};
+struct node*createnode(int item)
+	{
+	struct node*p;
+	p=(struct node*) malloc(sizeof(struct node));
+	p->data= item;
+	p->addr=NULL;
+	return p;
+};
+struct node*insertbeg(struct node*n, struct node*head)
+	{
+	if (head==NULL)
+		head=n;
+	else
+		{
+		n->addr=head;
+		head=n;
+		}
+	return head;
+	};
+void traversal(struct node*head)
+	{
+	struct node*p;
+	if (head==NULL)
+		printf("Empty");
+	else
+		{
+		p=head;
+		while(p!=NULL)
+			{
+			p=p->data;
+			p=p->addr;
+			}
+		}
+	};
 void main()
 {
 	int choice;
