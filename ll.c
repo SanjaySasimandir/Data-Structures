@@ -135,14 +135,14 @@ void traversal(struct node*head)
 		p=head;
 		while(p!=NULL)
 			{
-			printf("%d /n",p->data);
+			printf("%d \n",p->data);
 			p=p->addr;
 			}
 		}
 	};
 void main()
 {
-	int choice,number;
+	int choice,number,pos,data;
 	struct node *n;
 	struct node *head=NULL;
 	while(1)
@@ -163,20 +163,26 @@ void main()
 				printf("Enter your data: ");
 				scanf("%d",&number);
 				n=createnode(number);
-				head=insertbeg(n,head);
+				printf("Enter the position: ");
+        			scanf("%d",&pos);
+				head=insertmid(n,head,pos);
 				break;
 			case 3:
 				printf("You have chosen - 3. Insertion at the End\n");
 				printf("Enter your data: ");
 				scanf("%d",&number);
 				n=createnode(number);
-				head=insertbeg(n,head);
+				head=insertend(n,head);
 				break;
 			case 4:
 				printf("You have chosen - 4. Deletion from the Beginning\n");
+				head=delbeg(head);
 				break;
 			case 5:
 				printf("You have chosen - 5. Deletion from the Middle\n");
+				printf("\nEnter the data to be deleted: ");
+				scanf("%d",&data);
+				head=delmid(head,data);
 				break;
 			case 6:
 				printf("You have chosen - 6. Deletion at the End\n");
