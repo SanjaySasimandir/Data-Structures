@@ -68,7 +68,7 @@ struct node *delbeg(struct node *head)
 {
     if (head==NULL)
       {
-        printf("\nempty\n");
+        printf("Empty\n");
        }
     else
        {
@@ -83,7 +83,7 @@ struct node *delmid(struct node *head,int data)
     struct node *p, *c;
     if (head==NULL)
         {
-        printf("\nempty\n");
+        printf("Empty\n");
         }
     else
         {
@@ -99,7 +99,7 @@ struct node *delmid(struct node *head,int data)
             }
         else
             {
-             printf("No data found\n");
+             printf("Data not Found \n");
             }
         }
     return head;
@@ -109,7 +109,7 @@ struct node*delend(struct node*head)
 	struct node *p, *c;
 	if (head==NULL)
         {
-        printf("\nempty\n");
+        printf("Empty\n");
         }
     else
         {
@@ -164,7 +164,7 @@ void main()
 				scanf("%d",&number);
 				n=createnode(number);
 				printf("Enter the position: ");
-        			scanf("%d",&pos);
+        		scanf("%d",&pos);
 				head=insertmid(n,head,pos);
 				break;
 			case 3:
@@ -180,7 +180,7 @@ void main()
 				break;
 			case 5:
 				printf("You have chosen - 5. Deletion from the Middle\n");
-				printf("\nEnter the data to be deleted: ");
+				printf("Enter the data to be deleted: ");
 				scanf("%d",&data);
 				head=delmid(head,data);
 				break;
@@ -196,5 +196,4 @@ void main()
 		printf("\n\n\n");
 	}
 }
-
 
