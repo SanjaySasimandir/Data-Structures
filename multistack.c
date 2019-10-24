@@ -1,5 +1,5 @@
 #include<stdio.h>
-int top[5],stack[10],size=10,boundary[5];
+int top[5],stack[20],size=20,boundary[5];
 void push(int i,int data)
 {
 	if(top[i]==boundary[i+1])
@@ -24,8 +24,10 @@ int pop(int i)
 };
 void main()
 {
-	int n=3,i,m,data,choice;
+	int n,i,m,data,choice;
 	top[0]=boundary[0]=-1;
+	printf("Enter number of stacks: ");
+	scanf("%d",&n);
 	for(i=1;i<=n;i++)
 		top[i]=boundary[i]=((size-1)/n)*i;
 	while(1)
