@@ -7,7 +7,6 @@ void push(int i,int data)
 	else
 	{
 		stack[++top[i]]=data;
-	printf("ghhg\n");
 	}
 };
 int pop(int i)
