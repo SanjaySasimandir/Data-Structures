@@ -3,7 +3,7 @@ int queue[20],front[5],rear[5],size=20,boundary[5];
 void enqueue(int i,int data)
 {
 	if(rear[i]==boundary[i+1])
-		printf("Overflow");
+		printf("Overflow\n");
 	else
 	{
 		if(rear[i]==boundary[i])
@@ -15,7 +15,7 @@ int dequeue(int i)
 {
 	int d;
 	if (front[i]==boundary[i])
-		printf("Underflow");
+		printf("Underflow\n");
 	else
 	{
 		d=queue[front[i]];
