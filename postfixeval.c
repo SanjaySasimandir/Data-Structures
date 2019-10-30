@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<math.h>
+#include<ctype.h>
 int top=-1,stack[50],size=50;
 void push(int data)
 {
@@ -25,22 +26,14 @@ int pop()
 		return(stack[top--]);
 	}
 };
-void display()
-{
-	int i;
-	for(i=top;i>=0;i--)
-	{
-		printf("%d\n",stack[i]);
-	}
-};
 void main()
 {
 	int choice,i=0,x,y,result;
 	char string[50];
 	
 	printf("Enter the string to push: ");
-	scanf("%c",&string);
-	while(string[i]!=NULL)
+	scanf("%s",string);
+	while(string[i]!='\0')
 	{
 		if(isdigit(string[i]))
 			push(string[i]-'0');
@@ -60,7 +53,11 @@ void main()
 			result=pow(x,y);
 		else
 			printf("Invalid Expression!");
+		push(result);
 		}
+		
+		i++;
 	}
-	display();
+	result=pop();
+printf(" Ans: %d",result);
 }
