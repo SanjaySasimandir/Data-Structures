@@ -31,7 +31,7 @@ void main()
 	int choice,i=0,x,y,result;
 	char string[50];
 	
-	printf("Enter the string to push: ");
+	printf("Enter the string: ");
 	scanf("%s",string);
 	while(string[i]!='\0')
 	{
