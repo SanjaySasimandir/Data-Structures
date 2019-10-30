@@ -48,15 +48,15 @@ void main()
 		{
 		x=pop();
 		y=pop();
-		if(string[i]=="+")
+		if(string[i]=='+')
 			result=x+y;
-		else if(string[i]=="-")
+		else if(string[i]=='-')
 			result=x-y;
-		else if(string[i]=="*")
+		else if(string[i]=='*')
 			result=x*y;
-		else if(string[i]=="/")
+		else if(string[i]=='/')
 			result=x/y;
-		else if(string[i]=="^")
+		else if(string[i]=='^')
 			result=pow(x,y);
 		else
 			printf("Invalid Expression!");
