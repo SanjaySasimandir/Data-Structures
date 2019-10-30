@@ -1,5 +1,5 @@
-
 #include<stdio.h>
+#include<math.h>
 int top=-1,stack[50],size=50;
 void push(int data)
 {
@@ -35,14 +35,14 @@ void display()
 };
 void main()
 {
-	int choice,i=0;
+	int choice,i=0,x,y,result;
 	char string[50];
 	
 	printf("Enter the string to push: ");
-	scanf("%s",&string);
+	scanf("%c",&string);
 	while(string[i]!=NULL)
 	{
-		if(isdigit[string[i]])
+		if(isdigit(string[i]))
 			push(string[i]-'0');
 		else
 		{
@@ -61,3 +61,6 @@ void main()
 		else
 			printf("Invalid Expression!");
 		}
+	}
+	display();
+}
