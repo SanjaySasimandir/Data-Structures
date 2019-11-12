@@ -56,18 +56,15 @@ void main()
 	struct node *n, *root=NULL;
 	while(1)
 	{
-		printf("Choose from the following options: \n 1. Insert Node \n 2.Traversal\nEnter Choice:" );
+		printf("Choose from the following options: \n 1. Insert Node \n 2. Traversal\nEnter Choice:" );
 		scanf("%d",&choice);
 		switch (choice)
 				{
 				case 1:
 					printf("Enter your data: ");
 					scanf("%d",&number);
-					printf("work");
 					n=createnode(number);
-					printf("work");
 					root=insert(root,n);
-					printf("work");
 					break;
 				case 2:
 					inorder(root);
